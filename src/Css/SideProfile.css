@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap");
+
 /* side profile */
 .side__profile {
   flex: 0.2;
@@ -19,7 +21,8 @@
 .side__profile > .side__profile__details > h1 {
   font-weight: normal;
   font-size: 1.6rem;
-  margin-top: 30px;
+  margin-top: 25px;
+  font-family: "Zilla Slab", serif;
 }
 .side__profile > .side__profile__details > h2 {
   color: #999999;
@@ -29,7 +32,7 @@
 }
 .side__profile > .side__profile__details > h3 {
   text-align: center;
-  margin-top: 35px;
+  margin-top: 45px;
   line-height: 1.5;
   font-weight: normal;
   font-size: 1.05rem;

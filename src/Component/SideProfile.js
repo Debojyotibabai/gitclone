@@ -15,8 +15,8 @@ const SideProfile = (props) => {
       {/* side profile details */}
       <div className="side__profile__details">
         <img src={props.img} alt="" />
-        <h1>{props.name}</h1>
-        <h2>@{props.userName}</h2>
+        <h1>{props.name == null ? "No name" : props.name}</h1>
+        <h2>@{props.userName == null ? "No username" : props.userName}</h2>
         <h3>{props.bio}</h3>
       </div>
       <hr />
@@ -30,7 +30,8 @@ const SideProfile = (props) => {
           <TwitterIcon /> Twitter
         </a>
         <p>
-          <LocationOnIcon /> {props.address}
+          <LocationOnIcon />{" "}
+          {props.address == null ? "No address" : props.address}
         </p>
       </div>
 

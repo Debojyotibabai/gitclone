@@ -39,7 +39,10 @@ const Overview = () => {
     <div className="right__section">
       {/* check userData and set side profile */}
       {userData == null ? (
-        <h1 className="side__profile" style={{ textAlign: "center" }}>
+        <h1
+          className="side__profile"
+          style={{ textAlign: "center", fontSize: "1.7rem" }}
+        >
           Loading...
         </h1>
       ) : (
