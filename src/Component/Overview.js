@@ -5,37 +5,31 @@ import SideProfile from "./SideProfile";
 
 // css
 import "../App.css";
+import "../Css/SideProfile.css";
 
 // axios
 import axios from "axios";
 
 const Overview = () => {
   // github user data
-  const [userData, setUserData] = useState({
-    img: "https://avatars.githubusercontent.com/u/47671168?v=4",
-    name: "Debojyoti Ghosh",
-    userName: "Debojyotibabai",
-    bio: "Front-End Web Developer || Web Designer",
-    githubLink: "https://github.com/Debojyotibabai",
-    twitterUserName: "debojyotibabai1",
-    address: "Kolkata, India",
-  });
+  const [userData, setUserData] = useState();
 
   // search input value
   const [inputValue, setInputValue] = useState();
 
-  // get and set user data
+  // get and set user data for first time
+  useEffect(() => {
+    axios
+      .get("https://api.github.com/users/Debojyotibabai")
+      .then((response) => {
+        setUserData(response.data);
+      });
+  }, []);
+
+  // get and set user data from search
   const getUserData = () => {
     axios.get(`https://api.github.com/users/${inputValue}`).then((response) => {
-      setUserData({
-        img: response.data.avatar_url,
-        name: response.data.name,
-        userName: response.data.login,
-        bio: response.data.bio,
-        githubLink: response.data.html_url,
-        twitterUserName: response.data.twitter_username,
-        address: response.data.location,
-      });
+      setUserData(response.data);
     });
     setInputValue();
   };
@@ -43,16 +37,22 @@ const Overview = () => {
   return (
     // right section
     <div className="right__section">
-      {/* side profile */}
-      <SideProfile
-        img={userData.img}
-        name={userData.name}
-        userName={userData.userName}
-        bio={userData.bio}
-        githubLink={userData.githubLink}
-        twitterUserName={userData.twitterUserName}
-        address={userData.address}
-      />
+      {/* check userData and set side profile */}
+      {userData == null ? (
+        <h1 className="side__profile" style={{ textAlign: "center" }}>
+          Loading...
+        </h1>
+      ) : (
+        <SideProfile
+          img={userData.avatar_url}
+          name={userData.name}
+          userName={userData.login}
+          bio={userData.bio}
+          githubLink={userData.html_url}
+          twitterUserName={userData.twitter_username}
+          address={userData.location}
+        />
+      )}
 
       {/* right section details */}
       <div className="right__section__details">
@@ -69,3 +69,13 @@ const Overview = () => {
 };
 
 export default Overview;
+
+// {
+//   img: "https://avatars.githubusercontent.com/u/47671168?v=4",
+//   name: "Debojyoti Ghosh",
+//   userName: "Debojyotibabai",
+//   bio: "Front-End Web Developer || Web Designer",
+//   githubLink: "https://github.com/Debojyotibabai",
+//   twitterUserName: "debojyotibabai1",
+//   address: "Kolkata, India",
+// }
