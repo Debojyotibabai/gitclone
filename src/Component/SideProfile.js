@@ -17,7 +17,7 @@ const SideProfile = (props) => {
         <img src={props.img} alt="" />
         <h1>{props.name == null ? "No name" : props.name}</h1>
         <h2>@{props.userName == null ? "No username" : props.userName}</h2>
-        <h3>{props.bio}</h3>
+        <h3>{props.bio == null ? "No bio" : props.bio}</h3>
       </div>
       <hr />
 
