@@ -48,3 +48,8 @@
   > .MuiSvgIcon-root {
   margin-right: 15px;
 }
+
+/* footer */
+.side__navbar > p {
+  color: #717881;
+}

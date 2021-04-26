@@ -1,0 +1,88 @@
+/* side profile */
+.side__profile {
+  flex: 0.2;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+/* side profile details */
+.side__profile > .side__profile__details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.side__profile > .side__profile__details > img {
+  width: 40%;
+  border-radius: 100%;
+}
+.side__profile > .side__profile__details > h1 {
+  font-weight: normal;
+  font-size: 1.6rem;
+  margin-top: 30px;
+}
+.side__profile > .side__profile__details > h2 {
+  color: #999999;
+  font-weight: normal;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+.side__profile > .side__profile__details > h3 {
+  text-align: center;
+  margin-top: 35px;
+  line-height: 1.5;
+  font-weight: normal;
+  font-size: 1.05rem;
+}
+.side__profile > hr {
+  border: none;
+  border-top: 1px solid #dddddd;
+  margin-top: 60px;
+}
+
+/* side profile links */
+.side__profile > .side__profile__links {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 60px 0;
+}
+.side__profile > .side__profile__links > a {
+  display: flex;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 15px 0;
+  transition: 0.3s;
+}
+.side__profile > .side__profile__links > a > .MuiSvgIcon-root,
+.side__profile > .side__profile__links > p > .MuiSvgIcon-root {
+  color: #1089ff;
+  margin-right: 15px;
+}
+.side__profile > .side__profile__links > a:hover {
+  color: #1089ff;
+}
+.side__profile > .side__profile__links > p {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* follow button */
+.side__profile > a {
+  border: 1px solid #1089ff;
+  color: #1089ff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 12px 50px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.side__profile > a:hover {
+  color: #fff;
+  background-color: #1089ff;
+}

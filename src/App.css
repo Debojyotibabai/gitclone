@@ -13,3 +13,14 @@
   width: 100%;
   height: 100vh;
 }
+
+/* right section */
+.right__section {
+  flex: 0.8;
+  display: flex;
+}
+
+/* right section details */
+.right__section__details {
+  flex: 0.8;
+}

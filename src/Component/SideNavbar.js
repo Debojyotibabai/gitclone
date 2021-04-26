@@ -34,7 +34,7 @@ const SideNavbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink className="side__navbar__navlink" exact to="/star">
+          <NavLink className="side__navbar__navlink" exact to="/stars">
             <StarIcon /> Stars
           </NavLink>
         </li>
@@ -44,6 +44,9 @@ const SideNavbar = () => {
           </NavLink>
         </li>
       </ul>
+
+      {/* footer */}
+      <p>All rights reserved.</p>
     </div>
   );
 };
