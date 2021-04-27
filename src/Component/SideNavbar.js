@@ -24,22 +24,42 @@ const SideNavbar = () => {
       {/* side navbar navlist */}
       <ul className="side__navbar__navlist">
         <li>
-          <NavLink className="side__navbar__navlink" exact to="/">
+          <NavLink
+            className="side__navbar__navlink"
+            activeClassName="active__navlink"
+            exact
+            to="/"
+          >
             <VisibilityIcon /> Overview
           </NavLink>
         </li>
         <li>
-          <NavLink className="side__navbar__navlink" exact to="/repositories">
+          <NavLink
+            className="side__navbar__navlink"
+            activeClassName="active__navlink"
+            exact
+            to="/repositories"
+          >
             <ViewAgendaIcon /> Repositories
           </NavLink>
         </li>
         <li>
-          <NavLink className="side__navbar__navlink" exact to="/stars">
+          <NavLink
+            className="side__navbar__navlink"
+            activeClassName="active__navlink"
+            exact
+            to="/stars"
+          >
             <StarIcon /> Stars
           </NavLink>
         </li>
         <li>
-          <NavLink className="side__navbar__navlink" exact to="/followers">
+          <NavLink
+            className="side__navbar__navlink"
+            activeClassName="active__navlink"
+            exact
+            to="/followers"
+          >
             <PeopleAltIcon /> Followers
           </NavLink>
         </li>

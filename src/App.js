@@ -30,7 +30,7 @@ const App = () => {
           <Route exact path="/repositories" component={Repositories} />
           <Route exact path="/stars" component={Stars} />
           <Route exact path="/followers" component={Followers} />
-          <Redirect to={Overview} />
+          <Redirect exact to="/" />
         </Switch>
       </div>
     </Router>

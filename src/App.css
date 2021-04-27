@@ -23,4 +23,37 @@
 /* right section details */
 .right__section__details {
   flex: 0.8;
+  padding: 30px;
+}
+
+/* search bar */
+.search__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.search__bar > input {
+  flex: 1;
+  border: none !important;
+  background-color: #f0f0f0;
+  padding: 15px 20px;
+  font-size: 1rem;
+  outline: none !important;
+}
+.search__bar > input::placeholder {
+  font-size: 0.95rem;
+}
+.search__bar > button {
+  padding: 15px 50px;
+  border: none !important;
+  outline: none !important;
+  background-color: #151a21;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+.search__bar > button:hover {
+  background-color: #2d3541;
 }

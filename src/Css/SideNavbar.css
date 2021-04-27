@@ -41,6 +41,9 @@
 .side__navbar > .side__navbar__navlist > li > .side__navbar__navlink:hover {
   color: #1089ff;
 }
+.side__navbar > .side__navbar__navlist > li > .active__navlink {
+  color: #1089ff;
+}
 .side__navbar
   > .side__navbar__navlist
   > li

@@ -15,7 +15,7 @@ const Overview = () => {
   const [userData, setUserData] = useState();
 
   // search input value
-  const [inputValue, setInputValue] = useState();
+  const [inputValue, setInputValue] = useState("");
 
   // get and set user data for first time
   useEffect(() => {
@@ -31,7 +31,7 @@ const Overview = () => {
     axios.get(`https://api.github.com/users/${inputValue}`).then((response) => {
       setUserData(response.data);
     });
-    setInputValue();
+    setInputValue("");
   };
 
   return (
@@ -59,13 +59,18 @@ const Overview = () => {
 
       {/* right section details */}
       <div className="right__section__details">
-        <input
-          onChange={(e) => {
-            setInputValue(e.target.value);
-          }}
-          type="text"
-        />
-        <button onClick={getUserData}>Search</button>
+        {/* search bar */}
+        <div className="search__bar">
+          <input
+            placeholder="Search github profile"
+            type="text"
+            value={inputValue}
+            onChange={(e) => {
+              setInputValue(e.target.value);
+            }}
+          />
+          <button onClick={getUserData}>Search</button>
+        </div>
       </div>
     </div>
   );
