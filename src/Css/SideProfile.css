@@ -5,6 +5,11 @@
   flex: 0.2;
   padding: 30px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+.side__profile::-webkit-scrollbar {
+  display: none;
 }
 
 /* side profile details */
