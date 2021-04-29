@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 // component
 import SideProfile from "./SideProfile";
@@ -6,31 +6,46 @@ import SideProfile from "./SideProfile";
 // css
 import "../App.css";
 import "../Css/SideProfile.css";
+import "../Css/Overview.css";
 
 // axios
 import axios from "axios";
 
+// context
+import { GlobalName } from "../Context";
+
 const Overview = () => {
-  // github user data
+  // global name from context
+  const [name, setName] = useContext(GlobalName);
+
+  // user data
   const [userData, setUserData] = useState();
+
+  // user stars
+  const [userStars, setUserStars] = useState();
 
   // search input value
   const [inputValue, setInputValue] = useState("");
 
-  // get and set user data for first time
+  // get and set user data
   useEffect(() => {
-    axios
-      .get("https://api.github.com/users/Debojyotibabai")
-      .then((response) => {
-        setUserData(response.data);
-      });
-  }, []);
-
-  // get and set user data from search
-  const getUserData = () => {
-    axios.get(`https://api.github.com/users/${inputValue}`).then((response) => {
+    axios.get(`https://api.github.com/users/${name}`).then((response) => {
       setUserData(response.data);
     });
+  }, [name]);
+
+  // get and set user stars
+  useEffect(() => {
+    axios
+      .get(`https://api.github.com/users/${name}/starred`)
+      .then((response) => {
+        setUserStars(response.data);
+      });
+  }, [name]);
+
+  // set global name
+  const getUserData = () => {
+    setName(inputValue);
     setInputValue("");
   };
 
@@ -71,19 +86,57 @@ const Overview = () => {
           />
           <button onClick={getUserData}>Search</button>
         </div>
+
+        {/* check userData and set users activity */}
+        {userData == null ? (
+          <h1
+            style={{
+              textAlign: "center",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              height: "80vh",
+            }}
+          >
+            Loading...
+          </h1>
+        ) : (
+          // users activity
+          <div className="users__activity">
+            <p>
+              Profile is created at: <span>{userData.created_at}</span>
+            </p>
+
+            {/* activity */}
+            <div className="activity">
+              <h1>
+                Repositories <span>{userData.public_repos}</span>
+              </h1>
+              <h1>
+                Stars{" "}
+                <span
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "1.5rem",
+                    marginTop: "20px",
+                    color: "#1089ff",
+                  }}
+                >
+                  {userStars == null ? "wait..." : userStars.length}
+                </span>
+              </h1>
+              <h1>
+                Followers <span>{userData.followers}</span>
+              </h1>
+              <h1>
+                Following <span>{userData.following}</span>
+              </h1>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
 export default Overview;
-
-// {
-//   img: "https://avatars.githubusercontent.com/u/47671168?v=4",
-//   name: "Debojyoti Ghosh",
-//   userName: "Debojyotibabai",
-//   bio: "Front-End Web Developer || Web Designer",
-//   githubLink: "https://github.com/Debojyotibabai",
-//   twitterUserName: "debojyotibabai1",
-//   address: "Kolkata, India",
-// }

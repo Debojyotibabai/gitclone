@@ -1,0 +1,34 @@
+/* users activity */
+.users__activity > p {
+  text-align: right;
+  font-size: 0.95rem;
+  margin-top: 40px;
+}
+.users__activity > p > span {
+  font-weight: bold;
+}
+
+/* activuty */
+.users__activity > .activity {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 60px;
+}
+.users__activity > .activity > h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(16, 137, 255, 0.13);
+  font-size: 1.2rem;
+  font-weight: normal;
+  width: 15%;
+}
+.users__activity > .activity > h1 > span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #1089ff;
+}
