@@ -15,8 +15,11 @@
   text-decoration: none;
 }
 .side__navbar > .side__navbar__logo > .MuiSvgIcon-root {
-  font-size: 5rem;
+  font-size: 4rem;
   margin-bottom: 10px;
+}
+.side__navbar > .side__navbar__logo > h1 {
+  font-size: 1.7rem;
 }
 
 /* side navbar navlist */
@@ -34,7 +37,7 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 35px 0;
   transition: 0.3s;
 }
