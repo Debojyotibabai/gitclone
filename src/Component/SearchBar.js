@@ -6,7 +6,7 @@ import "../Css/SearchBar.css";
 // context
 import { SearchValue, UserName } from "../Context";
 
-const SearchBar = (props) => {
+const SearchBar = () => {
   // global values
   const [searchValue, setSearchValue] = useContext(SearchValue);
   const [userName, setUserName] = useContext(UserName);
