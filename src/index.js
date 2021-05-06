@@ -1,7 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+
+// component
+import App from "./App";
+
+// context provider
 import { ContextProvider } from "./Context";
 
 ReactDOM.render(

@@ -1,62 +1,30 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 
 // component
 import SideProfile from "./SideProfile";
+import SearchBar from "./SearchBar";
 
 // css
 import "../App.css";
 import "../Css/SideProfile.css";
 import "../Css/Overview.css";
 
-// axios
-import axios from "axios";
-
 // context
-import { GlobalName } from "../Context";
+import { UserData, UserStar } from "../Context";
 
 const Overview = () => {
-  // global name from context
-  const [name, setName] = useContext(GlobalName);
-
-  // user data
-  const [userData, setUserData] = useState();
-
-  // user stars
-  const [userStars, setUserStars] = useState();
-
-  // search input value
-  const [inputValue, setInputValue] = useState("");
-
-  // get and set user data
-  useEffect(() => {
-    axios.get(`https://api.github.com/users/${name}`).then((response) => {
-      setUserData(response.data);
-    });
-  }, [name]);
-
-  // get and set user stars
-  useEffect(() => {
-    axios
-      .get(`https://api.github.com/users/${name}/starred`)
-      .then((response) => {
-        setUserStars(response.data);
-      });
-  }, [name]);
-
-  // set global name
-  const getUserData = () => {
-    setName(inputValue);
-    setInputValue("");
-  };
+  // global values
+  const [userData] = useContext(UserData);
+  const [userStar] = useContext(UserStar);
 
   return (
     // right section
     <div className="right__section">
-      {/* check userData and set side profile */}
+      {/* check user data and set side profile */}
       {userData == null ? (
         <h1
           className="side__profile"
-          style={{ textAlign: "center", fontSize: "1.7rem" }}
+          style={{ textAlign: "center", fontSize: "1.5rem" }}
         >
           Loading...
         </h1>
@@ -75,19 +43,9 @@ const Overview = () => {
       {/* right section details */}
       <div className="right__section__details">
         {/* search bar */}
-        <div className="search__bar">
-          <input
-            placeholder="Search github profile"
-            type="text"
-            value={inputValue}
-            onChange={(e) => {
-              setInputValue(e.target.value);
-            }}
-          />
-          <button onClick={getUserData}>Search</button>
-        </div>
+        <SearchBar />
 
-        {/* check userData and set users activity */}
+        {/* check global values and set users activity */}
         {userData == null ? (
           <h1
             style={{
@@ -96,13 +54,14 @@ const Overview = () => {
               alignItems: "center",
               justifyContent: "center",
               height: "80vh",
+              fontSize: "1.8rem",
             }}
           >
             Loading...
           </h1>
         ) : (
           // users activity
-          <div className="users__activity">
+          <div className="user__activity">
             <p>
               Profile is created at: <span>{userData.created_at}</span>
             </p>
@@ -122,7 +81,7 @@ const Overview = () => {
                     color: "#1089ff",
                   }}
                 >
-                  {userStars == null ? "wait..." : userStars.length}
+                  {userStar == null ? "wait" : userStar.length}
                 </span>
               </h1>
               <h1>
@@ -132,6 +91,9 @@ const Overview = () => {
                 Following <span>{userData.following}</span>
               </h1>
             </div>
+
+            {/* porpular repo */}
+            <div className="popular__repo"></div>
           </div>
         )}
       </div>

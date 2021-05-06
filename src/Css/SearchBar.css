@@ -1,33 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
-/* main section */
-.main__section {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-}
-
-/* right section */
-.right__section {
-  flex: 0.8;
-  display: flex;
-}
-
-/* right section details */
-.right__section__details {
-  flex: 0.75;
-  padding: 30px;
-}
-
-/* search bar */
-/* .search__bar {
+.search__bar {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,4 +27,4 @@
 }
 .search__bar > button:hover {
   background-color: #2d3541;
-} */
+}
