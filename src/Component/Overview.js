@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 // component
 import SideProfile from "./SideProfile";
 import SearchBar from "./SearchBar";
+import PopularRepoCard from "./PopularRepoCard";
 
 // css
 import "../App.css";
@@ -10,12 +11,13 @@ import "../Css/SideProfile.css";
 import "../Css/Overview.css";
 
 // context
-import { UserData, UserStar } from "../Context";
+import { UserData, UserStar, UserRepo } from "../Context";
 
 const Overview = () => {
   // global values
   const [userData] = useContext(UserData);
   const [userStar] = useContext(UserStar);
+  const [userRepo] = useContext(UserRepo);
 
   return (
     // right section
@@ -93,7 +95,35 @@ const Overview = () => {
             </div>
 
             {/* porpular repo */}
-            <div className="popular__repo"></div>
+            <div className="popular__repo">
+              <h1>POPULAR REPOSITORIES</h1>
+
+              {userRepo == null ? (
+                <h1
+                  style={{
+                    marginTop: "70px",
+                    color: "#1089ff",
+                    fontSize: "1.1rem",
+                  }}
+                >
+                  Wait...
+                </h1>
+              ) : (
+                <div className="repo">
+                  {userRepo.slice(0, 4).map((repo, repoIndex) => {
+                    return (
+                      <PopularRepoCard
+                        key={repoIndex}
+                        name={repo.name}
+                        description={repo.description}
+                        star={repo.stargazers_count}
+                        fork={repo.forks_count}
+                      />
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           </div>
         )}
       </div>

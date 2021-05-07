@@ -21,14 +21,32 @@
   justify-content: center;
   flex-direction: column;
   padding: 30px;
-  box-shadow: 0 0 30px rgba(16, 137, 255, 0.13);
+  box-shadow: 0 0 20px rgba(16, 137, 255, 0.13);
   font-size: 1.2rem;
   font-weight: normal;
   width: 23%;
 }
 .user__activity > .activity > h1 > span {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-top: 20px;
   color: #1089ff;
+}
+
+/* popular repo */
+.popular__repo {
+  margin-top: 90px;
+}
+.popular__repo > h1 {
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 2px;
+  word-spacing: 8px;
+}
+.popular__repo > .repo {
+  margin-top: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
 }
