@@ -20,7 +20,7 @@
   flex-direction: column;
 }
 .side__profile > .side__profile__details > img {
-  width: 40%;
+  width: 120px;
   border-radius: 100%;
 }
 .side__profile > .side__profile__details > h1 {
@@ -86,7 +86,7 @@
   color: #1089ff;
   text-decoration: none;
   font-size: 1.1rem;
-  padding: 10px 50px;
+  padding: 12px 60px;
   border-radius: 50px;
   transition: 0.3s;
 }

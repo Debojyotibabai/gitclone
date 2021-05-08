@@ -11,6 +11,9 @@ import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
 // css
 import "../Css/SideNavbar.css";
 
+// tooltip
+import ReactTooltip from "react-tooltip";
+
 const SideNavbar = () => {
   return (
     // side navbar
@@ -18,7 +21,6 @@ const SideNavbar = () => {
       {/* side navbar logo */}
       <NavLink exact to="/" className="side__navbar__logo">
         <GitHubIcon />
-        <h1>GitClone</h1>
       </NavLink>
 
       {/* side navbar navlist */}
@@ -26,47 +28,57 @@ const SideNavbar = () => {
         <li>
           <NavLink
             className="side__navbar__navlink"
+            data-effect="solid"
+            data-type="light"
+            data-tip="Overview"
             activeClassName="active__navlink"
             exact
             to="/"
           >
-            <VisibilityIcon /> Overview
+            <VisibilityIcon />
           </NavLink>
         </li>
         <li>
           <NavLink
             className="side__navbar__navlink"
+            data-effect="solid"
+            data-type="light"
+            data-tip="Repositories"
             activeClassName="active__navlink"
             exact
             to="/repositories"
           >
-            <ViewAgendaIcon /> Repositories
+            <ViewAgendaIcon />
           </NavLink>
         </li>
         <li>
           <NavLink
             className="side__navbar__navlink"
+            data-effect="solid"
+            data-type="light"
+            data-tip="Stars"
             activeClassName="active__navlink"
             exact
             to="/stars"
           >
-            <StarIcon /> Stars
+            <StarIcon />
           </NavLink>
         </li>
         <li>
           <NavLink
             className="side__navbar__navlink"
+            data-effect="solid"
+            data-type="light"
+            data-tip="Followers"
             activeClassName="active__navlink"
             exact
             to="/followers"
           >
-            <PeopleAltIcon /> Followers
+            <PeopleAltIcon />
           </NavLink>
         </li>
       </ul>
-
-      {/* footer */}
-      <p>All rights reserved.</p>
+      <ReactTooltip />
     </div>
   );
 };

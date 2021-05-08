@@ -1,6 +1,6 @@
 /* side navbar */
 .side__navbar {
-  flex: 0.2;
+  flex: 0.1;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -20,11 +20,7 @@
   text-decoration: none;
 }
 .side__navbar > .side__navbar__logo > .MuiSvgIcon-root {
-  font-size: 4rem;
-  margin-bottom: 10px;
-}
-.side__navbar > .side__navbar__logo > h1 {
-  font-size: 1.7rem;
+  font-size: 3rem;
 }
 
 /* side navbar navlist */
@@ -33,34 +29,27 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 50px;
 }
 .side__navbar > .side__navbar__navlist > li {
   list-style: none;
+  margin: 40px 0;
 }
 .side__navbar > .side__navbar__navlist > li > .side__navbar__navlink {
   color: #fff;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  font-size: 1.1rem;
-  margin: 35px 0;
   transition: 0.3s;
-}
-.side__navbar > .side__navbar__navlist > li > .side__navbar__navlink:hover {
-  color: #1089ff;
-}
-.side__navbar > .side__navbar__navlist > li > .active__navlink {
-  color: #1089ff;
 }
 .side__navbar
   > .side__navbar__navlist
   > li
   > .side__navbar__navlink
   > .MuiSvgIcon-root {
-  margin-right: 15px;
+  font-size: 1.7rem;
 }
-
-/* footer */
-.side__navbar > p {
-  color: #717881;
+.side__navbar > .side__navbar__navlist > li > .side__navbar__navlink:hover {
+  color: #1089ff;
+}
+.side__navbar > .side__navbar__navlist > li > .active__navlink {
+  color: #1089ff;
 }
