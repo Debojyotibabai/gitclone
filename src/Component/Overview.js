@@ -141,6 +141,11 @@ const Overview = () => {
                 </GitHubCalendar>
               </div>
             </div>
+
+            {/* recent activity */}
+            <div className="recent__activity">
+              <h1>RECENT ACTIVITIES</h1>
+            </div>
           </div>
         )}
       </div>

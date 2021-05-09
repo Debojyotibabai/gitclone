@@ -35,7 +35,7 @@
 
 /* popular repo */
 .popular__repo {
-  margin-top: 90px;
+  margin-top: 100px;
 }
 .popular__repo > h1 {
   font-size: 1rem;
@@ -53,16 +53,28 @@
 
 /* contribution chart */
 .contribution__chart {
-  margin-top: 90px;
+  margin-top: 100px;
 }
 .contribution__chart > h1 {
   font-size: 1rem;
   letter-spacing: 2px;
   word-spacing: 8px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   text-align: center;
 }
 .contribution__chart > .chart {
   width: 100%;
+  text-align: center;
+}
+
+/* recent activity */
+.recent__activity {
+  margin-top: 100px;
+}
+.recent__activity > h1 {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  word-spacing: 8px;
+  margin-bottom: 40px;
   text-align: center;
 }
