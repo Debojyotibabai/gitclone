@@ -50,3 +50,19 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+/* contribution chart */
+.contribution__chart {
+  margin-top: 90px;
+}
+.contribution__chart > h1 {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  word-spacing: 8px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.contribution__chart > .chart {
+  width: 100%;
+  text-align: center;
+}

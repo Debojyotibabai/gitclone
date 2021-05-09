@@ -11,10 +11,17 @@ import "../Css/SideProfile.css";
 import "../Css/Overview.css";
 
 // context
-import { UserData, UserStar, UserRepo } from "../Context";
+import { UserName, UserData, UserStar, UserRepo } from "../Context";
+
+// github contribution calender
+import GitHubCalendar from "react-github-calendar";
+
+// tooltip
+import ReactTooltip from "react-tooltip";
 
 const Overview = () => {
   // global values
+  const [userName] = useContext(UserName);
   const [userData] = useContext(UserData);
   const [userStar] = useContext(UserStar);
   const [userRepo] = useContext(UserRepo);
@@ -123,6 +130,16 @@ const Overview = () => {
                   })}
                 </div>
               )}
+            </div>
+
+            {/* contribution chart */}
+            <div className="contribution__chart">
+              <h1>CONTRIBUTIONS</h1>
+              <div className="chart">
+                <GitHubCalendar username={userName} color="hsl(210, 100%, 53%)">
+                  <ReactTooltip delayShow={50} html />
+                </GitHubCalendar>
+              </div>
             </div>
           </div>
         )}
