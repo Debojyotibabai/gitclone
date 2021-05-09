@@ -78,12 +78,12 @@ const Overview = () => {
                 <span
                   style={{
                     fontWeight: "bold",
-                    fontSize: "1.3rem",
+                    fontSize: "1.4rem",
                     marginTop: "20px",
                     color: "#1089ff",
                   }}
                 >
-                  {userStar == null ? "wait..." : userStar.length}
+                  {userStar == null ? "wait" : userStar.length}
                 </span>
               </h1>
               <h1>
@@ -101,9 +101,9 @@ const Overview = () => {
               {userRepo == null ? (
                 <h1
                   style={{
-                    marginTop: "60px",
+                    marginTop: "50px",
                     color: "#1089ff",
-                    fontSize: "1.2rem",
+                    fontSize: "1.3rem",
                   }}
                 >
                   Wait...
