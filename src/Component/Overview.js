@@ -108,9 +108,9 @@ const Overview = () => {
               {userRepo == null ? (
                 <h1
                   style={{
-                    marginTop: "50px",
+                    marginTop: "60px",
                     color: "#1089ff",
-                    fontSize: "1.3rem",
+                    fontSize: "1.1rem",
                   }}
                 >
                   Wait...
