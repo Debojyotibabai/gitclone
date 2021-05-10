@@ -119,7 +119,17 @@ const Overview = () => {
                 </h1>
               ) : (
                 <div className="repo">
-                  {userRepo.length !== 0 ? (
+                  {userRepo.length === 0 ? (
+                    <h1
+                      style={{
+                        fontSize: "1rem",
+                        fontWeight: "normal",
+                        letterSpacing: "0px",
+                      }}
+                    >
+                      No repositories available here.
+                    </h1>
+                  ) : (
                     userRepo.slice(0, 4).map((repo, repoIndex) => {
                       return (
                         <PopularRepoCard
@@ -131,16 +141,6 @@ const Overview = () => {
                         />
                       );
                     })
-                  ) : (
-                    <h1
-                      style={{
-                        fontSize: "1rem",
-                        fontWeight: "normal",
-                        letterSpacing: "0px",
-                      }}
-                    >
-                      No repositories available.
-                    </h1>
                   )}
                 </div>
               )}
