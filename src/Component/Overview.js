@@ -11,7 +11,7 @@ import "../Css/SideProfile.css";
 import "../Css/Overview.css";
 
 // context
-import { UserName, UserData, UserStar, UserRepo } from "../Context";
+import { UserName, UserData, UserStar, UserRepo, UserEvents } from "../Context";
 
 // github contribution calender
 import GitHubCalendar from "react-github-calendar";
@@ -25,6 +25,7 @@ const Overview = () => {
   const [userData] = useContext(UserData);
   const [userStar] = useContext(UserStar);
   const [userRepo] = useContext(UserRepo);
+  const [userEvents] = useContext(UserEvents);
 
   return (
     // right section
@@ -108,26 +109,39 @@ const Overview = () => {
               {userRepo == null ? (
                 <h1
                   style={{
-                    marginTop: "60px",
-                    color: "#1089ff",
-                    fontSize: "1.1rem",
+                    marginTop: "55px",
+                    fontSize: "1rem",
+                    fontWeight: "normal",
+                    letterSpacing: "0px",
                   }}
                 >
-                  Wait...
+                  Loading...
                 </h1>
               ) : (
                 <div className="repo">
-                  {userRepo.slice(0, 4).map((repo, repoIndex) => {
-                    return (
-                      <PopularRepoCard
-                        key={repoIndex}
-                        name={repo.name}
-                        description={repo.description}
-                        star={repo.stargazers_count}
-                        fork={repo.forks_count}
-                      />
-                    );
-                  })}
+                  {userRepo.length !== 0 ? (
+                    userRepo.slice(0, 4).map((repo, repoIndex) => {
+                      return (
+                        <PopularRepoCard
+                          key={repoIndex}
+                          name={repo.name}
+                          description={repo.description}
+                          star={repo.stargazers_count}
+                          fork={repo.forks_count}
+                        />
+                      );
+                    })
+                  ) : (
+                    <h1
+                      style={{
+                        fontSize: "1rem",
+                        fontWeight: "normal",
+                        letterSpacing: "0px",
+                      }}
+                    >
+                      No repositories available.
+                    </h1>
+                  )}
                 </div>
               )}
             </div>
@@ -144,7 +158,7 @@ const Overview = () => {
 
             {/* recent activity */}
             <div className="recent__activity">
-              <h1>RECENT ACTIVITIES</h1>
+              <h1>Recent Push Events</h1>
             </div>
           </div>
         )}
