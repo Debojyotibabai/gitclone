@@ -163,7 +163,6 @@ const Overview = () => {
               {userEvent == null ? (
                 <h1
                   style={{
-                    marginTop: "50px",
                     fontSize: "1rem",
                     fontWeight: "normal",
                     letterSpacing: "0px",

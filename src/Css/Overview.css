@@ -42,9 +42,9 @@
   text-align: center;
   letter-spacing: 2px;
   word-spacing: 8px;
+  margin-bottom: 40px;
 }
 .popular__repo > .repo {
-  margin-top: 40px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -77,5 +77,5 @@
   word-spacing: 4px;
   border-left: 3px solid #1089ff;
   padding-left: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
