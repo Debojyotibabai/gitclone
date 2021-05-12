@@ -9,7 +9,7 @@ export const UserName = createContext();
 export const UserData = createContext();
 export const UserStar = createContext();
 export const UserRepo = createContext();
-export const UserEvents = createContext();
+export const UserEvent = createContext();
 
 // context provider
 export const ContextProvider = (props) => {
@@ -19,7 +19,7 @@ export const ContextProvider = (props) => {
   const [userData, setUserData] = useState();
   const [userStar, setUserStar] = useState();
   const [userRepo, setUserRepo] = useState();
-  const [userEvents, setUserEvents] = useState();
+  const [userEvent, setUserEvent] = useState();
 
   // fetch user data
   useEffect(() => {
@@ -46,12 +46,12 @@ export const ContextProvider = (props) => {
       });
   }, [userName]);
 
-  // fetch user events
+  // fetch user event
   useEffect(() => {
     axios
       .get(`https://api.github.com/users/${userName}/events`)
       .then((response) => {
-        setUserEvents(response.data);
+        setUserEvent(response.data);
       });
   }, [userName]);
 
@@ -61,9 +61,9 @@ export const ContextProvider = (props) => {
         <UserData.Provider value={[userData, setUserData]}>
           <UserStar.Provider value={[userStar, setUserStar]}>
             <UserRepo.Provider value={[userRepo, setUserRepo]}>
-              <UserEvents.Provider value={[userEvents, setUserEvents]}>
+              <UserEvent.Provider value={[userEvent, setUserEvent]}>
                 {props.children}
-              </UserEvents.Provider>
+              </UserEvent.Provider>
             </UserRepo.Provider>
           </UserStar.Provider>
         </UserData.Provider>

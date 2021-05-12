@@ -4,6 +4,7 @@ import React, { useContext } from "react";
 import SideProfile from "./SideProfile";
 import SearchBar from "./SearchBar";
 import PopularRepoCard from "./PopularRepoCard";
+import RecentPush from "./RecentPush";
 
 // css
 import "../App.css";
@@ -11,7 +12,7 @@ import "../Css/SideProfile.css";
 import "../Css/Overview.css";
 
 // context
-import { UserName, UserData, UserStar, UserRepo, UserEvents } from "../Context";
+import { UserName, UserData, UserStar, UserRepo, UserEvent } from "../Context";
 
 // github contribution calender
 import GitHubCalendar from "react-github-calendar";
@@ -25,7 +26,7 @@ const Overview = () => {
   const [userData] = useContext(UserData);
   const [userStar] = useContext(UserStar);
   const [userRepo] = useContext(UserRepo);
-  const [userEvents] = useContext(UserEvents);
+  const [userEvent] = useContext(UserEvent);
 
   return (
     // right section
@@ -130,10 +131,10 @@ const Overview = () => {
                       No repositories available here.
                     </h1>
                   ) : (
-                    userRepo.slice(0, 4).map((repo, repoIndex) => {
+                    userRepo.slice(0, 4).map((repo) => {
                       return (
                         <PopularRepoCard
-                          key={repoIndex}
+                          key={repo.id}
                           name={repo.name}
                           description={repo.description}
                           star={repo.stargazers_count}
@@ -156,9 +157,52 @@ const Overview = () => {
               </div>
             </div>
 
-            {/* recent activity */}
-            <div className="recent__activity">
-              <h1>Recent Push Events</h1>
+            {/* recent event */}
+            <div className="recent__event">
+              <h1>Recent Pushes</h1>
+              {userEvent == null ? (
+                <h1
+                  style={{
+                    marginTop: "50px",
+                    fontSize: "1rem",
+                    fontWeight: "normal",
+                    letterSpacing: "0px",
+                    border: "none",
+                  }}
+                >
+                  Loading...
+                </h1>
+              ) : (
+                <div className="event">
+                  {userEvent.length === 0 ? (
+                    <h1
+                      style={{
+                        fontSize: "1rem",
+                        fontWeight: "normal",
+                        letterSpacing: "0px",
+                      }}
+                    >
+                      No activities available here.
+                    </h1>
+                  ) : (
+                    userEvent.slice(0, 5).map((eachEvent) => {
+                      return (
+                        <RecentPush
+                          key={eachEvent.id}
+                          name={eachEvent.repo.name}
+                          head={eachEvent.payload.head}
+                          message={
+                            eachEvent.payload.commits == null
+                              ? "No message"
+                              : eachEvent.payload.commits[0].message
+                          }
+                          date={eachEvent.created_at}
+                        />
+                      );
+                    })
+                  )}
+                </div>
+              )}
             </div>
           </div>
         )}

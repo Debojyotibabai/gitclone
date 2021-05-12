@@ -8,14 +8,14 @@
   font-weight: bold;
 }
 
-/* activuty */
-.user__activity > .activity {
+/* activity */
+.activity {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 60px;
 }
-.user__activity > .activity > h1 {
+.activity > h1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +26,7 @@
   font-weight: normal;
   width: 23%;
 }
-.user__activity > .activity > h1 > span {
+.activity > h1 > span {
   font-weight: bold;
   font-size: 1.4rem;
   margin-top: 20px;
@@ -67,15 +67,15 @@
   text-align: center;
 }
 
-/* recent activity */
-.recent__activity {
+/* recent event */
+.recent__event {
   margin-top: 100px;
 }
-.recent__activity > h1 {
+.recent__event > h1 {
   font-size: 1.1rem;
   letter-spacing: 2px;
   word-spacing: 4px;
-  margin-bottom: 40px;
   border-left: 3px solid #1089ff;
   padding-left: 10px;
+  margin-bottom: 40px;
 }
