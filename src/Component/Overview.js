@@ -127,7 +127,7 @@ const Overview = () => {
                         letterSpacing: "0px",
                       }}
                     >
-                      No repositories available here.
+                      No repository available here.
                     </h1>
                   ) : (
                     userRepo.slice(0, 4).map((repo) => {
@@ -180,7 +180,7 @@ const Overview = () => {
                         letterSpacing: "0px",
                       }}
                     >
-                      No activities available here.
+                      No activity available here.
                     </h1>
                   ) : (
                     userEvent.slice(0, 5).map((eachEvent) => {

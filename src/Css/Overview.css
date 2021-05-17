@@ -73,7 +73,7 @@
 }
 .recent__event > h1 {
   font-size: 1.1rem;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   word-spacing: 4px;
   border-left: 3px solid #1089ff;
   padding-left: 10px;
