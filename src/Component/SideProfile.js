@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 // css
 import "../Css/SideProfile.css";
@@ -8,35 +8,41 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 
-const SideProfile = (props) => {
+// context
+import { UserData } from "../Context";
+
+const SideProfile = () => {
+  // global values
+  const [userData] = useContext(UserData);
+
   return (
     // side profile
     <div className="side__profile">
       {/* side profile details */}
       <div className="side__profile__details">
-        <img src={props.img} alt="" />
-        <h1>{props.name == null ? "No name" : props.name}</h1>
-        <h2>@{props.userName == null ? "No username" : props.userName}</h2>
-        <h3>{props.bio == null ? "No bio" : props.bio}</h3>
+        <img src={userData.avatar_url} alt="avatar" />
+        <h1>{userData.name == null ? "No name" : userData.name}</h1>
+        <h2>@{userData.login == null ? "No username" : userData.login}</h2>
+        <h3>{userData.bio == null ? "No bio" : userData.bio}</h3>
       </div>
       <hr />
 
       {/* side profile links */}
       <div className="side__profile__links">
-        <a href={props.githubLink}>
+        <a href={userData.html_url}>
           <GitHubIcon /> GitHub
         </a>
-        <a href={`https://twitter.com/${props.twitterUserName}`}>
+        <a href={`https://twitter.com/${userData.twitter_username}`}>
           <TwitterIcon /> Twitter
         </a>
         <p>
           <LocationOnIcon />{" "}
-          {props.address == null ? "No address" : props.address}
+          {userData.location == null ? "No address" : userData.location}
         </p>
       </div>
 
       {/* follow button */}
-      <a href={props.githubLink}>Follow</a>
+      <a href={userData.html_url}>Follow</a>
     </div>
   );
 };

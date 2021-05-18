@@ -35,20 +35,12 @@ const Overview = () => {
       {userData == null ? (
         <h1
           className="side__profile"
-          style={{ textAlign: "center", fontSize: "1.5rem" }}
+          style={{ textAlign: "center", fontSize: "1.2rem" }}
         >
           Loading...
         </h1>
       ) : (
-        <SideProfile
-          img={userData.avatar_url}
-          name={userData.name}
-          userName={userData.login}
-          bio={userData.bio}
-          githubLink={userData.html_url}
-          twitterUserName={userData.twitter_username}
-          address={userData.location}
-        />
+        <SideProfile />
       )}
 
       {/* right section details */}
@@ -65,7 +57,7 @@ const Overview = () => {
               alignItems: "center",
               justifyContent: "center",
               height: "80vh",
-              fontSize: "1.8rem",
+              fontSize: "1.2rem",
             }}
           >
             Loading...
