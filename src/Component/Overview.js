@@ -20,6 +20,10 @@ import GitHubCalendar from "react-github-calendar";
 // tooltip
 import ReactTooltip from "react-tooltip";
 
+// loader
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
 const Overview = () => {
   // global values
   const [userName] = useContext(UserName);
@@ -33,12 +37,14 @@ const Overview = () => {
     <div className="right__section">
       {/* check user data and set side profile */}
       {userData == null ? (
-        <h1
+        <Loader
           className="side__profile"
-          style={{ textAlign: "center", fontSize: "1.2rem" }}
-        >
-          Loading...
-        </h1>
+          style={{ textAlign: "center" }}
+          type="ThreeDots"
+          color="#1089ff"
+          height={30}
+          width={30}
+        />
       ) : (
         <SideProfile />
       )}
@@ -50,18 +56,19 @@ const Overview = () => {
 
         {/* check global values and set users activity */}
         {userData == null ? (
-          <h1
+          <Loader
             style={{
               textAlign: "center",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               height: "80vh",
-              fontSize: "1.2rem",
             }}
-          >
-            Loading...
-          </h1>
+            type="ThreeDots"
+            color="#1089ff"
+            height={40}
+            width={40}
+          />
         ) : (
           // users activity
           <div className="user__activity">
@@ -76,15 +83,17 @@ const Overview = () => {
               </h1>
               <h1>
                 Stars{" "}
-                <span
-                  style={{
-                    fontWeight: "bold",
-                    fontSize: "1.4rem",
-                    marginTop: "20px",
-                    color: "#1089ff",
-                  }}
-                >
-                  {userStar == null ? "wait" : userStar.length}
+                <span>
+                  {userStar == null ? (
+                    <Loader
+                      type="ThreeDots"
+                      color="#1089ff"
+                      height={20}
+                      width={20}
+                    />
+                  ) : (
+                    userStar.length
+                  )}
                 </span>
               </h1>
               <h1>
@@ -100,15 +109,13 @@ const Overview = () => {
               <h1>POPULAR REPOSITORIES</h1>
 
               {userRepo == null ? (
-                <h1
-                  style={{
-                    fontSize: "1rem",
-                    fontWeight: "normal",
-                    letterSpacing: "0px",
-                  }}
-                >
-                  Loading...
-                </h1>
+                <Loader
+                  style={{ textAlign: "center" }}
+                  type="ThreeDots"
+                  color="#1089ff"
+                  height={30}
+                  width={30}
+                />
               ) : (
                 <div className="repo">
                   {userRepo.length === 0 ? (
@@ -152,16 +159,12 @@ const Overview = () => {
             <div className="recent__event">
               <h1>Recent Pushes</h1>
               {userEvent == null ? (
-                <h1
-                  style={{
-                    fontSize: "1rem",
-                    fontWeight: "normal",
-                    letterSpacing: "0px",
-                    border: "none",
-                  }}
-                >
-                  Loading...
-                </h1>
+                <Loader
+                  type="ThreeDots"
+                  color="#1089ff"
+                  height={30}
+                  width={30}
+                />
               ) : (
                 <div className="event">
                   {userEvent.length === 0 ? (

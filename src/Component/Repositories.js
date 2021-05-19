@@ -11,6 +11,10 @@ import SearchBar from "./SearchBar";
 import "../App.css";
 import "../Css/SideProfile.css";
 
+// loader
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
 const Repositories = () => {
   // global values
   const [userData] = useContext(UserData);
@@ -20,12 +24,14 @@ const Repositories = () => {
     <div className="right__section">
       {/* check user data and set side profile */}
       {userData == null ? (
-        <h1
+        <Loader
           className="side__profile"
-          style={{ textAlign: "center", fontSize: "1.2rem" }}
-        >
-          Loading...
-        </h1>
+          style={{ textAlign: "center" }}
+          type="ThreeDots"
+          color="#1089ff"
+          height={30}
+          width={30}
+        />
       ) : (
         <SideProfile />
       )}
@@ -36,18 +42,19 @@ const Repositories = () => {
         <SearchBar />
 
         {userData == null ? (
-          <h1
+          <Loader
             style={{
               textAlign: "center",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               height: "80vh",
-              fontSize: "1.2rem",
             }}
-          >
-            Loading...
-          </h1>
+            type="ThreeDots"
+            color="#1089ff"
+            height={40}
+            width={40}
+          />
         ) : (
           // users activity
           <div className="user__activity"></div>
