@@ -56,7 +56,7 @@ const Repositories = () => {
             width={40}
           />
         ) : (
-          // users activity
+          // user activity
           <div className="user__activity"></div>
         )}
       </div>

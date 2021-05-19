@@ -70,7 +70,7 @@ const Overview = () => {
             width={40}
           />
         ) : (
-          // users activity
+          // user activity
           <div className="user__activity">
             <p>
               Profile is created at: <span>{userData.created_at}</span>
