@@ -1,0 +1,20 @@
+/* respositories section */
+.repositories__section {
+  margin-top: 60px;
+}
+.repositories__section > h1 {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  word-spacing: 8px;
+  margin-bottom: 25px;
+}
+.repositories__section > p {
+  display: flex;
+  color: #999999;
+}
+.repositories__section > p > span {
+  margin-right: 10px;
+  color: #1089ff;
+  font-size: 1.1rem;
+  font-weight: bold;
+}

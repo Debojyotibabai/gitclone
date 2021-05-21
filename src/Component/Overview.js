@@ -40,7 +40,7 @@ const Overview = () => {
         <Loader
           className="side__profile"
           style={{ textAlign: "center" }}
-          type="ThreeDots"
+          type="Oval"
           color="#1089ff"
           height={30}
           width={30}
@@ -64,7 +64,7 @@ const Overview = () => {
               justifyContent: "center",
               height: "80vh",
             }}
-            type="ThreeDots"
+            type="Oval"
             color="#1089ff"
             height={40}
             width={40}
@@ -111,7 +111,7 @@ const Overview = () => {
               {userRepo == null ? (
                 <Loader
                   style={{ textAlign: "center" }}
-                  type="ThreeDots"
+                  type="Oval"
                   color="#1089ff"
                   height={30}
                   width={30}
@@ -160,10 +160,11 @@ const Overview = () => {
               <h1>Recent Pushes</h1>
               {userEvent == null ? (
                 <Loader
-                  type="ThreeDots"
+                  style={{ marginBottom: "50px" }}
+                  type="Oval"
                   color="#1089ff"
-                  height={30}
-                  width={30}
+                  height={25}
+                  width={25}
                 />
               ) : (
                 <div className="event">

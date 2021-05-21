@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 // context
-import { UserData } from "../Context";
+import { UserData, UserRepo } from "../Context";
 
 // component
 import SideProfile from "./SideProfile";
@@ -10,6 +10,7 @@ import SearchBar from "./SearchBar";
 // css
 import "../App.css";
 import "../Css/SideProfile.css";
+import "../Css/Repositories.css";
 
 // loader
 import Loader from "react-loader-spinner";
@@ -18,6 +19,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 const Repositories = () => {
   // global values
   const [userData] = useContext(UserData);
+  const [userRepo] = useContext(UserRepo);
 
   return (
     // right section
@@ -27,7 +29,7 @@ const Repositories = () => {
         <Loader
           className="side__profile"
           style={{ textAlign: "center" }}
-          type="ThreeDots"
+          type="Oval"
           color="#1089ff"
           height={30}
           width={30}
@@ -50,14 +52,34 @@ const Repositories = () => {
               justifyContent: "center",
               height: "80vh",
             }}
-            type="ThreeDots"
+            type="Oval"
             color="#1089ff"
             height={40}
             width={40}
           />
         ) : (
           // user activity
-          <div className="user__activity"></div>
+          <div className="user__activity">
+            {/* repositories section */}
+            <div className="repositories__section">
+              <h1>REPOSITORIES</h1>
+              <p>
+                <span>
+                  {userRepo == null ? (
+                    <Loader
+                      type="ThreeDots"
+                      color="#1089ff"
+                      height={20}
+                      width={20}
+                    />
+                  ) : (
+                    userRepo.length
+                  )}
+                </span>
+                repositories has been created till now
+              </p>
+            </div>
+          </div>
         )}
       </div>
     </div>
