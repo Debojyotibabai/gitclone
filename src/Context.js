@@ -10,6 +10,7 @@ export const UserData = createContext();
 export const UserStar = createContext();
 export const UserRepo = createContext();
 export const UserEvent = createContext();
+export const UserFollowers = createContext();
 
 // context provider
 export const ContextProvider = (props) => {
@@ -20,6 +21,7 @@ export const ContextProvider = (props) => {
   const [userStar, setUserStar] = useState();
   const [userRepo, setUserRepo] = useState();
   const [userEvent, setUserEvent] = useState();
+  const [userFollowers, setUserFollowers] = useState();
 
   // fetch user data
   useEffect(() => {
@@ -55,6 +57,15 @@ export const ContextProvider = (props) => {
       });
   }, [userName]);
 
+  // fetch user followers
+  useEffect(() => {
+    axios
+      .get(`https://api.github.com/users/${userName}/followers`)
+      .then((response) => {
+        setUserFollowers(response.data);
+      });
+  }, [userName]);
+
   return (
     <SearchValue.Provider value={[searchValue, setSearchValue]}>
       <UserName.Provider value={[userName, setUserName]}>
@@ -62,7 +73,11 @@ export const ContextProvider = (props) => {
           <UserStar.Provider value={[userStar, setUserStar]}>
             <UserRepo.Provider value={[userRepo, setUserRepo]}>
               <UserEvent.Provider value={[userEvent, setUserEvent]}>
-                {props.children}
+                <UserFollowers.Provider
+                  value={[userFollowers, setUserFollowers]}
+                >
+                  {props.children}
+                </UserFollowers.Provider>
               </UserEvent.Provider>
             </UserRepo.Provider>
           </UserStar.Provider>

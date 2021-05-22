@@ -1,11 +1,13 @@
-/* user activity */
-.user__activity > p {
-  text-align: right;
+/* user main section */
+.user__main__section > p {
   font-size: 0.95rem;
   margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
 }
-.user__activity > p > span {
+.user__main__section > p > span {
   font-weight: bold;
+  margin-left: 10px;
 }
 
 /* activity */

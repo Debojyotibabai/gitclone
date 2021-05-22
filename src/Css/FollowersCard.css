@@ -1,0 +1,23 @@
+.followers__card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px #dddddd solid;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+}
+.followers__card > img {
+  width: 50px;
+  border-radius: 100%;
+}
+.followers__card > h1 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+.followers__card:hover h1 {
+  color: #1089ff;
+}
