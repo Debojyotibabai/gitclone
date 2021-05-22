@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useHistory } from "react-router-dom";
 
 // component
 import SideProfile from "./SideProfile";
@@ -15,12 +16,22 @@ import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 // context
-import { UserData, UserFollowers } from "../Context";
+import { UserName, UserData, UserFollowers } from "../Context";
 
 const Followers = () => {
   // global values
+  const [userName, setUserName] = useContext(UserName);
   const [userData] = useContext(UserData);
   const [userFollowers] = useContext(UserFollowers);
+
+  // use history
+  const history = useHistory();
+
+  // change profile functionality
+  const changeProfile = (login) => {
+    setUserName(login);
+    history.push("/");
+  };
 
   return (
     // right section
@@ -66,15 +77,20 @@ const Followers = () => {
                       fontSize: "1rem",
                       fontWeight: "normal",
                       letterSpacing: "0px",
+                      textAlign: "center",
                     }}
                   >
-                    No followers available here.
+                    No one follows him.
                   </h1>
                 ) : (
                   userFollowers.map((eachFollower, eachFollowerIndex) => {
                     return (
                       <FollowersCard
                         key={eachFollowerIndex}
+                        changeProfile={changeProfile.bind(
+                          this,
+                          eachFollower.login
+                        )}
                         img={eachFollower.avatar_url}
                         name={eachFollower.login}
                       />

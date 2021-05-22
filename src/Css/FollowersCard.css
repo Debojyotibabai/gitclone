@@ -4,9 +4,10 @@
   align-items: center;
   cursor: pointer;
   border: 1px #dddddd solid;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 12px 20px;
   margin-bottom: 15px;
+  text-decoration: none;
 }
 .followers__card > img {
   width: 50px;
@@ -15,8 +16,9 @@
 .followers__card > h1 {
   font-size: 1.2rem;
   font-weight: normal;
-  margin-left: 15px;
+  margin-left: 20px;
   transition: 0.3s;
+  color: #000;
 }
 .followers__card:hover h1 {
   color: #1089ff;

@@ -206,9 +206,10 @@ const Overview = () => {
                       fontSize: "1rem",
                       fontWeight: "normal",
                       letterSpacing: "0px",
+                      marginBottom: "50px",
                     }}
                   >
-                    No activity available here.
+                    No recent push available here.
                   </h1>
                 ) : (
                   userEvent.slice(0, 5).map((eachEvent) => {
