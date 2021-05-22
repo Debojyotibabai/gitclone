@@ -48,8 +48,8 @@
   font-size: 1.7rem;
 }
 .side__navbar > .side__navbar__navlist > li > .side__navbar__navlink:hover {
-  color: #1089ff;
+  color: #0366d6;
 }
 .side__navbar > .side__navbar__navlist > li > .active__navlink {
-  color: #1089ff;
+  color: #0366d6;
 }

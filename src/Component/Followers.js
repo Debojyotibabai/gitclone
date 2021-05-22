@@ -42,7 +42,7 @@ const Followers = () => {
           className="side__profile"
           style={{ textAlign: "center" }}
           type="Oval"
-          color="#1089ff"
+          color="#0366d6"
           height={30}
           width={30}
         />
@@ -65,7 +65,7 @@ const Followers = () => {
               <Loader
                 style={{ textAlign: "center" }}
                 type="Oval"
-                color="#1089ff"
+                color="#0366d6"
                 height={30}
                 width={30}
               />

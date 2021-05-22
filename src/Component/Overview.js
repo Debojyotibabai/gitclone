@@ -41,7 +41,7 @@ const Overview = () => {
           className="side__profile"
           style={{ textAlign: "center" }}
           type="Oval"
-          color="#1089ff"
+          color="#0366d6"
           height={30}
           width={30}
         />
@@ -62,7 +62,7 @@ const Overview = () => {
               {userData == null ? (
                 <Loader
                   type="ThreeDots"
-                  color="#1089ff"
+                  color="#0366d6"
                   height={20}
                   width={20}
                 />
@@ -80,7 +80,7 @@ const Overview = () => {
                 {userData == null ? (
                   <Loader
                     type="ThreeDots"
-                    color="#1089ff"
+                    color="#0366d6"
                     height={20}
                     width={20}
                   />
@@ -95,7 +95,7 @@ const Overview = () => {
                 {userStar == null ? (
                   <Loader
                     type="ThreeDots"
-                    color="#1089ff"
+                    color="#0366d6"
                     height={20}
                     width={20}
                   />
@@ -110,7 +110,7 @@ const Overview = () => {
                 {userData == null ? (
                   <Loader
                     type="ThreeDots"
-                    color="#1089ff"
+                    color="#0366d6"
                     height={20}
                     width={20}
                   />
@@ -125,7 +125,7 @@ const Overview = () => {
                 {userData == null ? (
                   <Loader
                     type="ThreeDots"
-                    color="#1089ff"
+                    color="#0366d6"
                     height={20}
                     width={20}
                   />
@@ -144,7 +144,7 @@ const Overview = () => {
               <Loader
                 style={{ textAlign: "center" }}
                 type="Oval"
-                color="#1089ff"
+                color="#0366d6"
                 height={30}
                 width={30}
               />
@@ -194,9 +194,9 @@ const Overview = () => {
               <Loader
                 style={{ marginBottom: "50px" }}
                 type="Oval"
-                color="#1089ff"
-                height={30}
-                width={30}
+                color="#0366d6"
+                height={25}
+                width={25}
               />
             ) : (
               <div className="event">

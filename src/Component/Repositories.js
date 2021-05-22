@@ -30,7 +30,7 @@ const Repositories = () => {
           className="side__profile"
           style={{ textAlign: "center" }}
           type="Oval"
-          color="#1089ff"
+          color="#0366d6"
           height={30}
           width={30}
         />
@@ -53,7 +53,7 @@ const Repositories = () => {
               height: "80vh",
             }}
             type="Oval"
-            color="#1089ff"
+            color="#0366d6"
             height={40}
             width={40}
           />
@@ -68,7 +68,7 @@ const Repositories = () => {
                   {userRepo == null ? (
                     <Loader
                       type="ThreeDots"
-                      color="#1089ff"
+                      color="#0366d6"
                       height={20}
                       width={20}
                     />
