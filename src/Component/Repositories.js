@@ -43,44 +43,35 @@ const Repositories = () => {
         {/* search bar */}
         <SearchBar />
 
-        {userData == null ? (
-          <Loader
-            style={{
-              textAlign: "center",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "80vh",
-            }}
-            type="Oval"
-            color="#0366d6"
-            height={40}
-            width={40}
-          />
-        ) : (
-          // user activity
-          <div className="user__activity">
-            {/* repositories section */}
-            <div className="repositories__section">
-              <h1>REPOSITORIES</h1>
+        {/* user main section */}
+        <div className="user__main__section">
+          {/* repositories section */}
+          <div className="repositories__section">
+            <h1>REPOSITORIES</h1>
+            {userData == null ? (
               <p>
-                <span>
-                  {userRepo == null ? (
-                    <Loader
-                      type="ThreeDots"
-                      color="#0366d6"
-                      height={20}
-                      width={20}
-                    />
-                  ) : (
-                    userRepo.length
-                  )}
-                </span>
-                repositories has been created till now
+                Wait a minute
+                <Loader
+                  style={{ marginLeft: "10px" }}
+                  type="ThreeDots"
+                  color="#0366d6"
+                  height={20}
+                  width={20}
+                />
               </p>
-            </div>
+            ) : userData.public_repos <= 30 ? (
+              <p>
+                <span>{userData.public_repos}</span>repositories has been
+                created till now.
+              </p>
+            ) : (
+              <p>
+                <span>{userData.public_repos}</span>repositories has been
+                created till now. Some of these are:
+              </p>
+            )}
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

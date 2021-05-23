@@ -10,7 +10,6 @@
 }
 .repositories__section > p {
   display: flex;
-  color: #999999;
 }
 .repositories__section > p > span {
   margin-right: 10px;
