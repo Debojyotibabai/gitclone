@@ -69,14 +69,13 @@ const Followers = () => {
                 width={30}
               />
             ) : (
+              // followers
               <div className="followers">
                 {userFollowers.length === 0 ? (
                   <h1
                     style={{
-                      fontSize: "1rem",
+                      fontSize: "1.01rem",
                       fontWeight: "normal",
-                      letterSpacing: "0px",
-                      textAlign: "center",
                     }}
                   >
                     No one follows him.

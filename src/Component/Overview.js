@@ -137,9 +137,8 @@ const Overview = () => {
           </div>
 
           {/* porpular repo */}
-          <div className="popular__repo">
-            <h1>POPULAR REPOSITORIES</h1>
-
+          <div className="section">
+            <h1>POPULAR REPOSITORY</h1>
             {userRepo == null ? (
               <Loader
                 style={{ textAlign: "center" }}
@@ -149,13 +148,12 @@ const Overview = () => {
                 width={30}
               />
             ) : (
-              <div className="repo">
+              <div className="sub__section">
                 {userRepo.length === 0 ? (
                   <h1
                     style={{
-                      fontSize: "1rem",
+                      fontSize: "1.01rem",
                       fontWeight: "normal",
-                      letterSpacing: "0px",
                     }}
                   >
                     No repository available here.
@@ -178,9 +176,9 @@ const Overview = () => {
           </div>
 
           {/* contribution chart */}
-          <div className="contribution__chart">
-            <h1>CONTRIBUTIONS</h1>
-            <div className="chart">
+          <div className="section">
+            <h1>CONTRIBUTION</h1>
+            <div className="sub__section">
               <GitHubCalendar username={userName} color="hsl(210, 100%, 53%)">
                 <ReactTooltip delayShow={50} html />
               </GitHubCalendar>
@@ -188,24 +186,23 @@ const Overview = () => {
           </div>
 
           {/* recent event */}
-          <div className="recent__event">
-            <h1>Recent Pushes</h1>
+          <div className="section">
+            <h1>RECENT PUSH</h1>
             {userEvent == null ? (
               <Loader
-                style={{ marginBottom: "50px" }}
+                style={{ textAlign: "center", marginBottom: "50px" }}
                 type="Oval"
                 color="#0366d6"
-                height={25}
-                width={25}
+                height={30}
+                width={30}
               />
             ) : (
-              <div className="event">
+              <div className="sub__section">
                 {userEvent.length === 0 ? (
                   <h1
                     style={{
-                      fontSize: "1rem",
+                      fontSize: "1.01rem",
                       fontWeight: "normal",
-                      letterSpacing: "0px",
                       marginBottom: "50px",
                     }}
                   >

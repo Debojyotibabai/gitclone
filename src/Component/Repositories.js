@@ -67,7 +67,7 @@ const Repositories = () => {
             ) : (
               <p>
                 <span>{userData.public_repos}</span>repositories has been
-                created till now. Some of these are:
+                created till now. Some of these are :
               </p>
             )}
           </div>

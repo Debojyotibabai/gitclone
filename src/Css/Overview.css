@@ -35,49 +35,20 @@
   color: #0366d6;
 }
 
-/* popular repo */
-.popular__repo {
+/* section */
+.section {
   margin-top: 100px;
 }
-.popular__repo > h1 {
+.section > h1 {
   font-size: 1rem;
   text-align: center;
   letter-spacing: 2px;
-  word-spacing: 8px;
-  margin-bottom: 50px;
+  word-spacing: 5px;
+  margin-bottom: 70px;
 }
-.popular__repo > .repo {
+.section > .sub__section {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-/* contribution chart */
-.contribution__chart {
-  margin-top: 100px;
-}
-.contribution__chart > h1 {
-  font-size: 1rem;
-  letter-spacing: 2px;
-  word-spacing: 8px;
-  margin-bottom: 50px;
-  text-align: center;
-}
-.contribution__chart > .chart {
-  width: 100%;
-  text-align: center;
-}
-
-/* recent event */
-.recent__event {
-  margin-top: 100px;
-}
-.recent__event > h1 {
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  word-spacing: 4px;
-  border-left: 3px solid #0366d6;
-  padding-left: 10px;
-  margin-bottom: 50px;
 }

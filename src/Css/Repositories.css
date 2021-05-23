@@ -1,15 +1,17 @@
-/* respositories section */
+/* repositories repositories__section */
 .repositories__section {
-  margin-top: 60px;
+  margin-top: 70px;
 }
 .repositories__section > h1 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: 2px;
-  word-spacing: 8px;
-  margin-bottom: 25px;
+  word-spacing: 5px;
+  text-align: center;
 }
 .repositories__section > p {
   display: flex;
+  justify-content: center;
+  margin: 30px 0 50px;
 }
 .repositories__section > p > span {
   margin-right: 10px;

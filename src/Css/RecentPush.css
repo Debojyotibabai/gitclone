@@ -5,6 +5,7 @@
   margin-bottom: 60px;
   padding-bottom: 60px;
   border-bottom: 1px solid #dddddd;
+  width: 100%;
 }
 .recent__push > .push {
   width: 70%;
