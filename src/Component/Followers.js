@@ -60,7 +60,6 @@ const Followers = () => {
           {/* followers section */}
           <div className="followers__section">
             <h1>RECENT FOLLOWERS</h1>
-
             {userFollowers == null ? (
               <Loader
                 style={{ textAlign: "center" }}
