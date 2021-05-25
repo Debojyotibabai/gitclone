@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import SideProfile from "./SideProfile";
 import SearchBar from "./SearchBar";
 import PopularRepoCard from "./PopularRepoCard";
-import RecentPush from "./RecentPush";
+import RecentEvent from "./RecentEvent";
 
 // css
 import "../App.css";
@@ -187,7 +187,7 @@ const Overview = () => {
 
           {/* recent event */}
           <div className="section">
-            <h1>RECENT PUSH</h1>
+            <h1>RECENT EVENT</h1>
             {userEvent == null ? (
               <Loader
                 style={{ textAlign: "center", marginBottom: "50px" }}
@@ -206,13 +206,14 @@ const Overview = () => {
                       marginBottom: "50px",
                     }}
                   >
-                    No recent push available here.
+                    No recent event available here.
                   </h1>
                 ) : (
                   userEvent.slice(0, 5).map((eachEvent) => {
                     return (
-                      <RecentPush
+                      <RecentEvent
                         key={eachEvent.id}
+                        type={eachEvent.type}
                         name={eachEvent.repo.name}
                         head={eachEvent.payload.head}
                         message={
