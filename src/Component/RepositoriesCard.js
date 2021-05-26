@@ -5,9 +5,9 @@ import "../Css/RepositoriesCard.css";
 
 // icon
 import LanguageIcon from "@material-ui/icons/Language";
-import StarBorderIcon from "@material-ui/icons/StarBorder";
+import GradeOutlinedIcon from "@material-ui/icons/GradeOutlined";
 import RestaurantIcon from "@material-ui/icons/Restaurant";
-import LinearScaleIcon from "@material-ui/icons/LinearScale";
+import CheckIcon from "@material-ui/icons/Check";
 import QueryBuilderIcon from "@material-ui/icons/QueryBuilder";
 
 // tooltip
@@ -35,7 +35,7 @@ const RepositoriesCard = (props) => {
             data-place="bottom"
             data-tip="Total starred"
           >
-            <StarBorderIcon fontSize="small" /> {props.star}
+            <GradeOutlinedIcon fontSize="small" /> {props.star}
           </p>
           <p
             data-effect="solid"
@@ -51,7 +51,7 @@ const RepositoriesCard = (props) => {
             data-place="bottom"
             data-tip="License"
           >
-            <LinearScaleIcon fontSize="small" /> {props.license}
+            <CheckIcon fontSize="small" /> {props.license}
           </p>
           <p
             data-effect="solid"

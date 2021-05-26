@@ -107,7 +107,7 @@ const Repositories = () => {
                         description={eachRepo.description}
                         language={
                           eachRepo.language == null
-                            ? "Unknown language"
+                            ? "Unknown"
                             : eachRepo.language
                         }
                         star={eachRepo.stargazers_count}

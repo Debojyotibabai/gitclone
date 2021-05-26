@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  padding: 40px;
   /* border: 1px solid #dddddd; */
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -15,9 +15,10 @@
   justify-content: center;
 }
 .repositories__card > .detail > h1 {
-  color: #177df1;
+  color: #096bdb;
   font-size: 1.15rem;
   margin-bottom: 15px;
+  font-weight: normal;
 }
 .repositories__card > .detail > span {
   color: #888888;
@@ -41,5 +42,5 @@
 }
 .repositories__card > .detail > .count > p > .MuiSvgIcon-root {
   color: #4294f1;
-  margin-right: 10px;
+  margin-right: 5px;
 }
