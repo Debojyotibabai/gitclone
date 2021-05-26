@@ -16,7 +16,7 @@ export const UserFollowers = createContext();
 export const ContextProvider = (props) => {
   // global values
   const [searchValue, setSearchValue] = useState("");
-  const [userName, setUserName] = useState("Debojyotibabai");
+  const [userName, setUserName] = useState("Torvalds");
   const [userData, setUserData] = useState();
   const [userStar, setUserStar] = useState();
   const [userRepo, setUserRepo] = useState();

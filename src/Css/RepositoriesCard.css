@@ -15,8 +15,8 @@
   justify-content: center;
 }
 .repositories__card > .detail > h1 {
-  color: #0366d6;
-  font-size: 1.2rem;
+  color: #177df1;
+  font-size: 1.15rem;
   margin-bottom: 15px;
 }
 .repositories__card > .detail > span {
@@ -25,6 +25,11 @@
 }
 .repositories__card > .detail > p {
   margin: 20px 0 50px;
+}
+.repositories__card > .detail > .count {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 .repositories__card > .detail > .count > p {
   display: flex;

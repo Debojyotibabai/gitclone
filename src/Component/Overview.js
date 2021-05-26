@@ -41,7 +41,7 @@ const Overview = () => {
           className="side__profile"
           style={{ textAlign: "center" }}
           type="Oval"
-          color="#0366d6"
+          color="#177df1"
           height={30}
           width={30}
         />
@@ -62,7 +62,7 @@ const Overview = () => {
               {userData == null ? (
                 <Loader
                   type="ThreeDots"
-                  color="#0366d6"
+                  color="#177df1"
                   height={20}
                   width={20}
                 />
@@ -80,7 +80,7 @@ const Overview = () => {
                 {userData == null ? (
                   <Loader
                     type="ThreeDots"
-                    color="#0366d6"
+                    color="#177df1"
                     height={20}
                     width={20}
                   />
@@ -95,7 +95,7 @@ const Overview = () => {
                 {userStar == null ? (
                   <Loader
                     type="ThreeDots"
-                    color="#0366d6"
+                    color="#177df1"
                     height={20}
                     width={20}
                   />
@@ -110,7 +110,7 @@ const Overview = () => {
                 {userData == null ? (
                   <Loader
                     type="ThreeDots"
-                    color="#0366d6"
+                    color="#177df1"
                     height={20}
                     width={20}
                   />
@@ -125,7 +125,7 @@ const Overview = () => {
                 {userData == null ? (
                   <Loader
                     type="ThreeDots"
-                    color="#0366d6"
+                    color="#177df1"
                     height={20}
                     width={20}
                   />
@@ -143,7 +143,7 @@ const Overview = () => {
               <Loader
                 style={{ textAlign: "center" }}
                 type="Oval"
-                color="#0366d6"
+                color="#177df1"
                 height={30}
                 width={30}
               />
@@ -179,7 +179,7 @@ const Overview = () => {
           <div className="section">
             <h1>CONTRIBUTION</h1>
             <div className="sub__section">
-              <GitHubCalendar username={userName} color="hsl(210, 100%, 53%)">
+              <GitHubCalendar username={userName} color="hsl(212, 89%, 52%)">
                 <ReactTooltip delayShow={50} html />
               </GitHubCalendar>
             </div>
@@ -192,7 +192,7 @@ const Overview = () => {
               <Loader
                 style={{ textAlign: "center", marginBottom: "50px" }}
                 type="Oval"
-                color="#0366d6"
+                color="#177df1"
                 height={30}
                 width={30}
               />

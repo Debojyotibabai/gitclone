@@ -23,7 +23,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 30px;
-  box-shadow: 0 0 20px rgba(3, 102, 214, 0.13);
+  box-shadow: 0 0 20px rgba(23, 125, 241, 0.13);
   font-size: 1.2rem;
   font-weight: normal;
   width: 23%;
@@ -32,7 +32,7 @@
   font-weight: bold;
   font-size: 1.4rem;
   margin-top: 20px;
-  color: #0366d6;
+  color: #177df1;
 }
 
 /* section */
