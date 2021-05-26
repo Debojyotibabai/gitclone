@@ -1,0 +1,39 @@
+.repositories__card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  /* border: 1px solid #dddddd; */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.repositories__card > .detail > .count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.repositories__card > .detail > h1 {
+  color: #0366d6;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.repositories__card > .detail > span {
+  color: #888888;
+}
+.repositories__card > .detail > p {
+  margin: 20px 0 50px;
+}
+.repositories__card > .detail > .count > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-right: 30px;
+}
+.repositories__card > .detail > .count > p > .MuiSvgIcon-root {
+  color: #4294f1;
+  margin-right: 10px;
+}

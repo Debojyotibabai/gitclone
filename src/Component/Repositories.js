@@ -6,6 +6,7 @@ import { UserData, UserRepo } from "../Context";
 // component
 import SideProfile from "./SideProfile";
 import SearchBar from "./SearchBar";
+import RepositoriesCard from "./RepositoriesCard";
 
 // css
 import "../App.css";
@@ -69,6 +70,55 @@ const Repositories = () => {
                 <span>{userData.public_repos}</span>repositories has been
                 created till now. Some of these are :
               </p>
+            )}
+
+            {userRepo == null ? (
+              <Loader
+                style={{ textAlign: "center" }}
+                type="Oval"
+                color="#0366d6"
+                height={30}
+                width={30}
+              />
+            ) : (
+              // repositories
+              <div className="repositories">
+                {userRepo.length === 0 ? (
+                  <h1
+                    style={{
+                      fontSize: "1.01rem",
+                      fontWeight: "normal",
+                      textAlign: "center",
+                    }}
+                  >
+                    No repositories available here.
+                  </h1>
+                ) : (
+                  userRepo.map((eachRepo, eachRepoIndex) => {
+                    return (
+                      <RepositoriesCard
+                        key={eachRepoIndex}
+                        name={eachRepo.name}
+                        branch={
+                          eachRepo.default_branch == null
+                            ? null
+                            : eachRepo.default_branch
+                        }
+                        description={eachRepo.description}
+                        language={eachRepo.language}
+                        star={eachRepo.stargazers_count}
+                        fork={eachRepo.forks_count}
+                        license={
+                          eachRepo.license == null
+                            ? "No license"
+                            : eachRepo.license.name
+                        }
+                        date={eachRepo.updated_at}
+                      />
+                    );
+                  })
+                )}
+              </div>
             )}
           </div>
         </div>
