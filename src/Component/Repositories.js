@@ -104,7 +104,11 @@ const Repositories = () => {
                             ? null
                             : eachRepo.default_branch
                         }
-                        description={eachRepo.description}
+                        description={
+                          eachRepo.description == null
+                            ? "No description"
+                            : eachRepo.description
+                        }
                         language={
                           eachRepo.language == null
                             ? "Unknown"
