@@ -105,7 +105,11 @@ const Repositories = () => {
                             : eachRepo.default_branch
                         }
                         description={eachRepo.description}
-                        language={eachRepo.language}
+                        language={
+                          eachRepo.language == null
+                            ? "Unknown language"
+                            : eachRepo.language
+                        }
                         star={eachRepo.stargazers_count}
                         fork={eachRepo.forks_count}
                         license={

@@ -17,10 +17,11 @@
 .repositories__card > .detail > h1 {
   color: #0366d6;
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .repositories__card > .detail > span {
   color: #888888;
+  font-size: 0.9rem;
 }
 .repositories__card > .detail > p {
   margin: 20px 0 50px;

@@ -10,6 +10,9 @@ import RestaurantIcon from "@material-ui/icons/Restaurant";
 import LinearScaleIcon from "@material-ui/icons/LinearScale";
 import QueryBuilderIcon from "@material-ui/icons/QueryBuilder";
 
+// tooltip
+import ReactTooltip from "react-tooltip";
+
 const RepositoriesCard = (props) => {
   return (
     <div className="repositories__card">
@@ -18,23 +21,49 @@ const RepositoriesCard = (props) => {
         <span>{props.branch}</span>
         <p>{props.description}</p>
         <div className="count">
-          <p>
+          <p
+            data-effect="solid"
+            data-background-color="#5fa5f5"
+            data-place="bottom"
+            data-tip="Used language"
+          >
             <LanguageIcon fontSize="small" /> {props.language}
           </p>
-          <p>
+          <p
+            data-effect="solid"
+            data-background-color="#5fa5f5"
+            data-place="bottom"
+            data-tip="Total starred"
+          >
             <StarBorderIcon fontSize="small" /> {props.star}
           </p>
-          <p>
+          <p
+            data-effect="solid"
+            data-background-color="#5fa5f5"
+            data-place="bottom"
+            data-tip="Total fork"
+          >
             <RestaurantIcon fontSize="small" /> {props.fork}
           </p>
-          <p>
+          <p
+            data-effect="solid"
+            data-background-color="#5fa5f5"
+            data-place="bottom"
+            data-tip="License"
+          >
             <LinearScaleIcon fontSize="small" /> {props.license}
           </p>
-          <p>
+          <p
+            data-effect="solid"
+            data-background-color="#5fa5f5"
+            data-place="bottom"
+            data-tip="Last update"
+          >
             <QueryBuilderIcon fontSize="small" /> {props.date}
           </p>
         </div>
       </div>
+      <ReactTooltip />
     </div>
   );
 };
