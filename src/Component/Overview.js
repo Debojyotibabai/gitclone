@@ -57,7 +57,7 @@ const Overview = () => {
         {/* user main section */}
         <div className="user__main__section">
           <p>
-            Profile is created at:
+            Profile is created at :
             <span>
               {userData == null ? (
                 <Loader

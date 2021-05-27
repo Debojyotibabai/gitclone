@@ -13,7 +13,7 @@ const RecentEvent = (props) => {
         <p>{props.message}</p>
       </div>
       <p>
-        Pushed at: <span>{props.date}</span>
+        Pushed at : <span>{props.date}</span>
       </p>
     </div>
   );
