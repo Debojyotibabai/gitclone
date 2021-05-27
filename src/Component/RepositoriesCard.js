@@ -15,7 +15,7 @@ import ReactTooltip from "react-tooltip";
 
 const RepositoriesCard = (props) => {
   return (
-    <div className="repositories__card">
+    <div className="repositories__card" onClick={props.repoDetails}>
       <div className="detail">
         <h1>{props.name}</h1>
         <span>{props.branch}</span>

@@ -19,7 +19,7 @@ const SideNavbar = () => {
     // side navbar
     <div className="side__navbar">
       {/* side navbar logo */}
-      <NavLink exact to="/" className="side__navbar__logo">
+      <NavLink to="/" className="side__navbar__logo">
         <GitHubIcon />
       </NavLink>
 
@@ -45,7 +45,6 @@ const SideNavbar = () => {
             data-type="light"
             data-tip="Repositories"
             activeClassName="active__navlink"
-            exact
             to="/repositories"
           >
             <ViewAgendaIcon />
@@ -58,7 +57,6 @@ const SideNavbar = () => {
             data-type="light"
             data-tip="Stars"
             activeClassName="active__navlink"
-            exact
             to="/stars"
           >
             <StarIcon />
@@ -71,7 +69,6 @@ const SideNavbar = () => {
             data-type="light"
             data-tip="Followers"
             activeClassName="active__navlink"
-            exact
             to="/followers"
           >
             <PeopleAltIcon />
