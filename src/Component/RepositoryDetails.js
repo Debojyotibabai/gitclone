@@ -44,10 +44,23 @@ const RepositoryDetails = () => {
           <div className="repository__details">
             <h1>FILES</h1>
             <p>
-              These are the corresponding files of <span>{userRepoName}</span>
+              These are the corresponding files of
+              <span>
+                {userRepoName == null ? (
+                  <Loader
+                    type="ThreeDots"
+                    color="#177df1"
+                    height={20}
+                    width={20}
+                  />
+                ) : (
+                  { userRepoName }
+                )}
+              </span>
+              repository
             </p>
 
-            {UserRepoDetails == null ? (
+            {userRepoDetails == null ? (
               <Loader
                 style={{ textAlign: "center" }}
                 type="Oval"
