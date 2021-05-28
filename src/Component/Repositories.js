@@ -122,6 +122,7 @@ const Repositories = () => {
                             : eachRepo.license.name
                         }
                         date={eachRepo.updated_at}
+                        url={eachRepo.clone_url}
                       />
                     );
                   })

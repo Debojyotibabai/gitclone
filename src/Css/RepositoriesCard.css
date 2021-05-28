@@ -1,13 +1,15 @@
 .repositories__card {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 40px;
   box-shadow: -3px 3px 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   margin-bottom: 40px;
 }
+
+/* left side */
 .repositories__card > .detail > .count {
   display: flex;
   align-items: center;
@@ -25,6 +27,7 @@
 .repositories__card > .detail > p {
   margin: 30px 0 50px;
   line-height: 1.5;
+  width: 90%;
 }
 .repositories__card > .detail > .count {
   display: flex;
@@ -38,8 +41,19 @@
   font-size: 0.9rem;
   margin-right: 30px;
   color: #333333;
+  cursor: default;
 }
 .repositories__card > .detail > .count > p > .MuiSvgIcon-root {
   color: #4294f1;
   margin-right: 5px;
+}
+
+/* right side */
+.repositories__card > .clone__url > button {
+  background-color: transparent;
+  border: none !important;
+  outline: none !important;
+  color: #177df1;
+  cursor: pointer;
+  transition: 0.3s;
 }
