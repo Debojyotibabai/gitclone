@@ -29,7 +29,6 @@ const Followers = () => {
 
   // change profile functionality
   const changeProfile = (login) => {
-    localStorage.setItem("userName", login);
     setUserName(login);
     history.push("/");
   };

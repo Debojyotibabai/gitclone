@@ -25,11 +25,6 @@ export const ContextProvider = (props) => {
   const [userEvent, setUserEvent] = useState();
   const [userFollowers, setUserFollowers] = useState();
 
-  // set user name from local storage
-  useEffect(() => {
-    setUserName(localStorage.getItem("userName") || userName);
-  }, [userName]);
-
   // fetch user data
   useEffect(() => {
     axios.get(`https://api.github.com/users/${userName}`).then((response) => {
