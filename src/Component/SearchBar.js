@@ -23,6 +23,7 @@ const SearchBar = () => {
       />
       <button
         onClick={() => {
+          localStorage.setItem("userName", searchValue);
           setUserName(searchValue);
           setSearchValue("");
         }}

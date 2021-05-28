@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
-import { useHistory } from "react-router-dom";
 
 // context
-import { UserData, UserRepo, UserRepoName } from "../Context";
+import { UserData, UserRepo } from "../Context";
 
 // component
 import SideProfile from "./SideProfile";
@@ -22,16 +21,6 @@ const Repositories = () => {
   // global values
   const [userData] = useContext(UserData);
   const [userRepo] = useContext(UserRepo);
-  const [userRepoName, setUserRepoName] = useContext(UserRepoName);
-
-  // use history
-  const history = useHistory();
-
-  // repoDetails functionality
-  const repoDetails = (repoName) => {
-    setUserRepoName(repoName);
-    history.push("/repositories/repositorydetails");
-  };
 
   return (
     // right section
@@ -109,7 +98,6 @@ const Repositories = () => {
                     return (
                       <RepositoriesCard
                         key={eachRepoIndex}
-                        repoDetails={repoDetails.bind(this, eachRepo.name)}
                         name={eachRepo.name}
                         branch={
                           eachRepo.default_branch == null
