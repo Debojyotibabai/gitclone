@@ -11,7 +11,6 @@ import RepositoriesCard from "./RepositoriesCard";
 // css
 import "../App.css";
 import "../Css/SideProfile.css";
-import "../Css/Repositories.css";
 
 // loader
 import Loader from "react-loader-spinner";
@@ -47,7 +46,7 @@ const Repositories = () => {
         {/* user main section */}
         <div className="user__main__section">
           {/* repositories section */}
-          <div className="repositories__section">
+          <div className="repo__section">
             <h1>REPOSITORIES</h1>
             {userData == null ? (
               <p>
@@ -91,7 +90,7 @@ const Repositories = () => {
                       textAlign: "center",
                     }}
                   >
-                    No repositories available here.
+                    No repository available here.
                   </h1>
                 ) : (
                   userRepo.map((eachRepo, eachRepoIndex) => {

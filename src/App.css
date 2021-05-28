@@ -30,3 +30,25 @@
 .right__section__details::-webkit-scrollbar {
   display: none;
 }
+
+/* repo section of repositories section and stars section */
+.repo__section {
+  margin-top: 70px;
+}
+.repo__section > h1 {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  text-align: center;
+}
+.repo__section > p {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 50px;
+}
+.repo__section > p > span {
+  margin-right: 10px;
+  color: #177df1;
+  font-size: 1.1rem;
+  font-weight: bold;
+}

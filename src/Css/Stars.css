@@ -1,0 +1,22 @@
+/* stars */
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.stars > p {
+  display: inline-block;
+  background-color: #fff;
+  color: #5fa5f5;
+  padding: 10px 20px;
+  border: 1px solid #5fa5f5;
+  border-radius: 5px;
+  margin: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.stars > p:hover {
+  background-color: #5fa5f5;
+  color: #fff;
+}
