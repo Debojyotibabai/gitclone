@@ -74,7 +74,7 @@ const RepositoriesCard = (props) => {
         <CopyToClipboard text={props.url}>
           <button
             data-effect="solid"
-            data-background-color="#5fa5f5"
+            // data-background-color="#5fa5f5"
             data-tip="Copy the github repo url to clone"
           >
             <FileCopyOutlinedIcon fontSize="small" />

@@ -8,9 +8,9 @@
 .stars > p {
   display: inline-block;
   background-color: #fff;
-  color: #5fa5f5;
+  color: #177df1;
   padding: 10px 20px;
-  border: 1px solid #5fa5f5;
+  border: 1px solid #177df1;
   border-radius: 5px;
   margin: 10px;
   transition: 0.3s;
@@ -19,4 +19,5 @@
 .stars > p:hover {
   background-color: #5fa5f5;
   color: #fff;
+  border-color: #5fa5f5;
 }

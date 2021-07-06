@@ -101,7 +101,7 @@ const Stars = () => {
                       <p
                         key={eachStarIndex}
                         data-effect="solid"
-                        data-background-color="#177df1"
+                        // data-background-color="#177df1"
                         data-place="right"
                         data-tip={
                           eachStar.description == null
