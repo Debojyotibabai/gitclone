@@ -14,11 +14,8 @@ import "../Css/Overview.css";
 // context
 import { UserName, UserData, UserStar, UserRepo, UserEvent } from "../Context";
 
-// github contribution calender
+// github contribution calendar
 import GitHubCalendar from "react-github-calendar";
-
-// tooltip
-import ReactTooltip from "react-tooltip";
 
 // loader
 import Loader from "react-loader-spinner";
@@ -179,9 +176,25 @@ const Overview = () => {
           <div className="section">
             <h1>CONTRIBUTION</h1>
             <div className="sub__section">
-              <GitHubCalendar username={userName} color="hsl(212, 89%, 52%)">
-                <ReactTooltip delayShow={50} html />
-              </GitHubCalendar>
+              {userName ? (
+                <GitHubCalendar
+                  username={userName}
+                  blockSize={15}
+                  blockMargin={5}
+                  fontSize={16}
+                  style={{
+                    colorScheme: "light",
+                  }}
+                />
+              ) : (
+                <Loader
+                  style={{ textAlign: "center" }}
+                  type="Oval"
+                  color="#177df1"
+                  height={30}
+                  width={30}
+                />
+              )}
             </div>
           </div>
 
